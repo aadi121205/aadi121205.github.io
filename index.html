@@ -1,60 +1,89 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Would You Rather Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-.container {
-    text-align: center;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
-    width: 100%;
-}
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+        }
 
-h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
 
-.question {
-    margin-bottom: 20px;
-    font-size: 18px;
-}
+        .question {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
 
-.options {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
 
-.option-btn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 15px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+        .option-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
-.option-btn:hover {
-    background-color: #45a049;
-}
+        .option-btn:hover {
+            background-color: #45a049;
+        }
 
-#result {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #333;
-}
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Would You Rather?</h1>
+        <div class="question">
+            <p>Would you rather...</p>
+        </div>
+        <div class="options">
+            <button class="option-btn" onclick="chooseOption('Be able to fly')">Be able to fly</button>
+            <button class="option-btn" onclick="chooseOption('Be invisible')">Be invisible</button>
+        </div>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function chooseOption(option) {
+            document.getElementById("result").innerText = `You chose: ${option}`;
+        }
+    </script>
+</body>
+</html>
